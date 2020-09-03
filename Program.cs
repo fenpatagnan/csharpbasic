@@ -54,9 +54,9 @@ namespace csharpbasics_1
 
             //Collections.MergeAndSort(list3, list4);
 
-            Collections.Rotate(2);
+            //Collections.Rotate(2);
 
-            //Collections.ReturnNumberToDigits();
+            Collections.ReturnNumberToDigits();
 
 
             Helpers.Print("Press any key to close..");

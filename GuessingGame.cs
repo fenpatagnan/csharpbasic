@@ -10,44 +10,52 @@ namespace csharpbasics_1
     {
         private const int SecretNumber = 12;
         static int GuessLimit = 5;
-        static List<int> guessList = new List<int>();
+         
 
         public static void GuessTheNumber()
         {
             Helpers.PrintLn($"Find the secret number,please enter your guess:");
 
-            while(true)
+            List<int> guessList = new List<int>();
+
+            while (true)
             {
                 int guess = Helpers.GetIntInput();
 
                 bool isNumCorrect = CheckNumber(guess);
 
-                GuessIsLarge(guess);
+                if (isNumCorrect)
+                {
+                    Helpers.Print("Great! You have guessed the number correctly!");
+                    break;
 
-                GuessIsSmall(guess);
+                }
 
-                bool isExceeds = GuessExceeds(guess);
+                bool isExceeds = GuessExceeds(guess, guessList);
 
-                if (isExceeds || isNumCorrect)
+                if (isExceeds)
                 {
                     break;
                 }
 
+                GuessIsLarge(guess);
+
+                GuessIsSmall(guess);
+
             }
-            
+
         }
 
         static bool CheckNumber(int guess)
         {
             if(guess == SecretNumber)
             {
-                Helpers.Print("Great! You have guessed the number correctly!\n");
                 return true;
             }
             return false;
         }
 
-        static bool GuessExceeds(int guess)
+        static bool GuessExceeds(int guess, List<int> guessList)
         {
             
             int numberTries = 0;
@@ -58,7 +66,7 @@ namespace csharpbasics_1
                 numberTries++;
             }
 
-            if(guessList.Count == GuessLimit)
+            if(guessList.Count == GuessLimit && !CheckNumber(guess))
             {
                 Helpers.PrintLn("\n**Oops! You have reached the maximum number of tries.**\n");
                 return true;

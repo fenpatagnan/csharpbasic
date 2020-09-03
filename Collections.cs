@@ -63,9 +63,12 @@ namespace csharpbasics_1
 
         public static void ConcatLists(List<string> list1, List<string> list2)
         {
-            List<string> combinedList = list1.Concat(list2).ToList();
-            combinedList.ForEach(Console.WriteLine);
+            var combinedList = list1.Concat(list2);
 
+            foreach (string item in combinedList)
+            {
+                Console.WriteLine(item);
+            }
         }
         public static void AlternateCombineList(List<string> list1, List<string> list2)
         {
