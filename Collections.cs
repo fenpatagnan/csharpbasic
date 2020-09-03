@@ -30,7 +30,6 @@ namespace csharpbasics_1
         static void DefinedIntArrayMsg(int[] numberArray)
         {
             Helpers.PrintLn("Defined array is:");
-
             Helpers.PrintIntArr(numberArray);
         }
 
@@ -73,7 +72,7 @@ namespace csharpbasics_1
             combinedList.ForEach(Console.WriteLine);
 
         }
-        public static void AlternateCombine(List<string> list1, List<string> list2)
+        public static void AlternateCombineList(List<string> list1, List<string> list2)
         {
             List<string> combinedList = new List<string>();
 
@@ -89,6 +88,14 @@ namespace csharpbasics_1
 
             combinedList.ForEach(Console.WriteLine);
         }
-            
+
+        public static void MergeAndSort(List<int> list1, List<int> list2)
+        {
+            List<int> combinedList = list1.Concat(list2).ToList();
+            combinedList.Sort();
+            combinedList.ForEach(Console.WriteLine);
+        }
+
+
     }
 }

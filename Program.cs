@@ -47,7 +47,12 @@ namespace csharpbasics_1
 
             //Collections.ConcatLists(list1, list2);
 
-            Collections.AlternateCombine(list1, list2);
+            //Collections.AlternateCombineList(list1, list2);
+
+            List<int> list3 = new List<int> { 4, 5, 6, };
+            List<int> list4 = new List<int> { 2, 3, 1 };
+
+            Collections.MergeAndSort(list3, list4);
 
             Helpers.Print("Press any key to close..");
 
