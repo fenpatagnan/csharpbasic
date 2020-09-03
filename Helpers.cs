@@ -13,6 +13,11 @@ namespace csharpbasics_1
             Console.WriteLine($"{string.Join(",", ArrayList)}");
         }
 
+        public static void PrintCharArr(char[] ArrayList)
+        {
+            Console.WriteLine($"{string.Join(",", ArrayList)}");
+        }
+
         public static void PrintIntArr(int[] ArrayList)
         {
             Console.WriteLine($"{string.Join(",", ArrayList)}");
@@ -41,9 +46,9 @@ namespace csharpbasics_1
             {
                input = Convert.ToInt32(Console.ReadLine());
             }
-            catch (Exception e)
+            catch (Exception)
             {
-                Helpers.Print(e.Message);
+                Environment.Exit(0);
             } 
             
             return input;

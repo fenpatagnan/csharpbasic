@@ -11,19 +11,14 @@ namespace csharpbasics_1
         public static void GetLargestElement(int[] numberArray)
         {
             DefinedIntArrayMsg(numberArray);
-
             Helpers.PrintLn("The max number is:" + numberArray.Max().ToString());
         }
 
         public static void ReverseAnArray(int[] numberArray)
         {
             DefinedIntArrayMsg(numberArray);
-
             Helpers.PrintLn("The reversed of array is:");
-
             Array.Reverse(numberArray);
-
-            
             Helpers.PrintIntArr(numberArray);
         }
 
@@ -94,6 +89,16 @@ namespace csharpbasics_1
             List<int> combinedList = list1.Concat(list2).ToList();
             combinedList.Sort();
             combinedList.ForEach(Console.WriteLine);
+        }
+
+        public static void ReturnNumberToDigits()
+        {
+            Helpers.PrintLn("Enter number:");
+            string number = Helpers.GetIntInput().ToString();
+            char[] digits = number.ToCharArray();
+
+            Helpers.PrintLn("List of Digits:");
+            Helpers.PrintCharArr(digits);
         }
 
 

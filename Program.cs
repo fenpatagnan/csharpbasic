@@ -52,7 +52,12 @@ namespace csharpbasics_1
             List<int> list3 = new List<int> { 4, 5, 6, };
             List<int> list4 = new List<int> { 2, 3, 1 };
 
-            Collections.MergeAndSort(list3, list4);
+            //Collections.MergeAndSort(list3, list4);
+
+            //Collections.RotatedElements(); skipped ftm
+
+            //Collections.ReturnNumberToDigits();
+
 
             Helpers.Print("Press any key to close..");
 
