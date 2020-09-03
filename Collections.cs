@@ -94,11 +94,20 @@ namespace csharpbasics_1
         public static void ReturnNumberToDigits()
         {
             Helpers.PrintLn("Enter number:");
+
             string number = Helpers.GetIntInput().ToString();
             char[] digits = number.ToCharArray();
 
             Helpers.PrintLn("List of Digits:");
             Helpers.PrintCharArr(digits);
+        }
+
+        public static void Rotate(int offset)
+        {
+            int[] list = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+            int[] newlist = list.Skip(offset).Concat(list.Take(offset)).ToArray();
+
+            Helpers.PrintIntArr(newlist);
         }
 
 

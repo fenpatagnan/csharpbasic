@@ -49,12 +49,12 @@ namespace csharpbasics_1
 
             //Collections.AlternateCombineList(list1, list2);
 
-            List<int> list3 = new List<int> { 4, 5, 6, };
-            List<int> list4 = new List<int> { 2, 3, 1 };
+            List<int> list3 = new List<int> { 6, 7, 8, 9, 10 };
+            List<int> list4 = new List<int> { 1, 2, 3, 4 , 5 };
 
             //Collections.MergeAndSort(list3, list4);
 
-            //Collections.RotatedElements(); skipped ftm
+            Collections.Rotate(2);
 
             //Collections.ReturnNumberToDigits();
 
