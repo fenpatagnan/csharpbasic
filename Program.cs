@@ -33,7 +33,19 @@ namespace csharpbasics_1
 
             //Collections.GetTotalSales(salesPerDays);
 
-            
+            //Looping.GetSumViaForLoop(salesPerDays);
+
+            //Looping.GetSumViaWhileLoop(salesPerDays);
+
+            //double sum = Looping.GetSumViaRecursively(salesPerDays, 0, 0);
+            //Helpers.PrintLn("Total Sales is: " + sum.ToString());
+
+            /* Concat List */
+            List<string> list1 = new List<string> { "a", "b", "c" };
+            List<string> list2 = new List<string> { "1", "2", "3"};
+            Collections.ConcatLists(list1, list2);
+
+            Collections.AlternateCombine(list1, list2);
 
             Helpers.Print("Press any key to close..");
 
