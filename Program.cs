@@ -41,9 +41,11 @@ namespace csharpbasics_1
             //Helpers.PrintLn("Total Sales is: " + sum.ToString());
 
             /* Concat List */
+
             List<string> list1 = new List<string> { "a", "b", "c" };
             List<string> list2 = new List<string> { "1", "2", "3"};
-            Collections.ConcatLists(list1, list2);
+
+            //Collections.ConcatLists(list1, list2);
 
             Collections.AlternateCombine(list1, list2);
 

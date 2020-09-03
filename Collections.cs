@@ -75,7 +75,19 @@ namespace csharpbasics_1
         }
         public static void AlternateCombine(List<string> list1, List<string> list2)
         {
-            List<string> = new List<string>();
+            List<string> combinedList = new List<string>();
+
+            int i = 0;
+           
+
+            foreach (string item in list1)
+            {
+                combinedList.Add(list1[i]);
+                combinedList.Add(list2[i]);
+                i++;
+            }
+
+            combinedList.ForEach(Console.WriteLine);
         }
             
     }
